@@ -41,9 +41,8 @@ Pandorabot.prototype.talk = function(input, fn) {
     } else {
         var c = Math.round(Math.random() * 1000001);
         document.cookie = "pb_client_name=" + c;
-        pb.client_name = c;
     }
-    var url = this.protocol + "://" + this.host + "/talk/" + this.app_id + "/" + this.botname + "?user_key=" + this.user_key + "&client_name=" + this.client_name + "&sessionid=" + this.sessionid + "&input=" + encodeURIComponent(input) + "&extra=true";
+    var url = this.protocol + "://" + this.host + "/talk/" + this.app_id + "/" + this.botname + "?user_key=" + this.user_key + "&client_name=" + this.client_name + "&sessionid=" + this.sessionid + "&input=" + encodeURIComponent(input);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.send();

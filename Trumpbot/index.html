@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Make Dating Great Again </title>
+    <script src="js/talk.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <h1> Make Dating Great Again</h1>
+    <form id="talk" class="boxedin" onsubmit="return false;">
+      <b>You say:</b> <input id="yousay" name="input" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
+      <br/>
+      <input id="talkbutton" type="button" value="talk" onclick="doTalk()"/> 
+    </form>
+    <p id="response"></p>
+  </body>
+</html>
